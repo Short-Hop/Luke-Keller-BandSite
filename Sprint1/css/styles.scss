@@ -1,0 +1,583 @@
+// Color Pallate
+$Black:  #323232;
+$Instock-blue: #004892;
+$Brainflix-blue:#0095FF;
+$White: #FFFFFF;
+$Silver: #AFAFAF;
+$Instock-blue-dark: #002F5F;
+$Brainflix-blue: #0065AD;
+$Mercury: #E1E1E1;
+$Alabaster: #FAFAFA;
+
+// Fonts
+@font-face {
+    font-family: "AvenirNextRegular";
+    src: url(./fonts/AvenirNextRegular.otf);
+}
+
+@font-face {
+    font-family: "AvenirNextDemiBold";
+    src: url(./fonts/AvenirNextDemi.otf);
+}
+
+@font-face {
+    font-family: "AvenirNextBold";
+    src: url(./fonts/AvenirNextBold.otf)
+}
+
+// Mobile Styling
+body {
+    margin: 0px;
+    font-family: AvenirNextRegular;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 7.5vw;
+    line-height: 10vw;
+    margin: 0px;
+    font-family: AvenirNextBold;
+}
+
+h2 {
+    font-size: 5vw;
+    line-height:7vw;
+    margin: 0px;
+    font-family: AvenirNextDemiBold;
+}
+
+h3 {
+    font-size: 4vw;
+    line-height: 6vw;
+    margin: 0px;
+    font-family: AvenirNextDemiBold;
+}
+
+h4 {
+    font-size: 3.8vw;
+    line-height: 5vw;
+    margin: 0px;
+    font-weight: normal;
+}
+
+// Mobile Navigation Bar
+nav {
+    background-color: $Black;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+
+.nav__logo{
+    display: flex;
+    padding-bottom: 1vw;
+}
+
+.nav__pages {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    
+}
+
+.nav__text {
+    &:hover {
+        border-color: $White;
+        font-weight: bold;
+        color: $White;
+        transition: 0.3s;
+    }
+    color: $Mercury;
+    text-align: center;
+    width: 50%;
+    padding: 2vw;
+    font-family: AvenirNextRegular;
+    font-weight: normal;
+    border-bottom: solid $Black 5px;
+}
+
+
+.nav__text--selected {
+    color: $White;
+    border-bottom: solid $White 5px;
+    font-weight: bold;
+}
+
+// Mobile Hero Image and Title
+header {
+    background-image: url(../assets/Images/Hero-image.jpg);
+    background-size: 100%;
+    height: 57vw;
+    display: flex;
+    align-items: center;
+
+}
+
+header {
+    h1 {
+        color: $White;
+        width: 70%;
+        padding: 5%;
+    }
+}
+
+header {
+    h1 {
+        width: 70%;
+        padding: 5%;
+    }
+}
+
+// Mobile Body and Photos
+.main__image--large {
+    object-fit: cover;
+    width: 90%;
+    height: 45vw;
+    align-self: center;
+    padding: 7.5vw 0px;
+}
+
+.main__image--small {
+    &:hover{
+        filter: grayscale(0%);
+        transition: 0.3s;
+    }
+    width: 90%;
+    align-self: center;
+    padding-bottom: 5%;
+    filter: grayscale(100%);
+}
+
+.main__text {
+    width: 90%;
+    align-self: center;
+}
+
+.main__quote {
+    @extend .main__text;
+    padding-bottom: 10%;
+}
+
+.main__quote--attribution {
+    @extend .main__text;
+    padding-bottom: 12.5%;
+}
+
+.main__paragraph--title {
+    @extend .main__text;
+    padding-bottom: 7.5%;
+}
+
+.main__paragraph--container {
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main__paragraph--text {
+    @extend .main__text;
+    width: 100%;
+}
+
+.main__photoGallery {
+    background-color: $Alabaster;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12.5%;
+    padding-bottom: 8%;
+}
+
+.main__photoGallery--title {
+    @extend .main__text;
+    padding-bottom: 7.5%;
+}
+
+// Mobile Footer
+footer {
+    background-color: $Black;
+    padding: 10% 0%;
+}
+
+.footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+}
+
+footer {
+    h4 {
+        line-height: 20px;
+    }
+}
+
+footer {
+    h1 {
+        font-size: 11vw;
+        line-height: 10vw;
+        color: $White;
+        padding-left: 3%;
+        padding-bottom: 10%;
+    }
+}
+
+.footer__social {
+    margin-left: 5%;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10%;
+}
+
+.footer__social--icon {
+    height: 6vw;
+    padding: 0px, 20px;
+}
+
+.footer__logo {
+    display: none;
+}
+
+.footer__text {
+    color: $Mercury;
+    font-family: AvenirNextRegular;
+    font-weight: normal;
+    padding-left: 3%;
+    padding-bottom: 6%;
+    font-size: 3.5vw;
+    line-height: 5vw;
+    font-weight: normal;
+}
+
+.footer__text--bold {
+    @extend .footer__text;
+    font-size: 4vw;
+    color: $White;
+    font-weight: 700;
+    padding-top: 5%;
+}
+
+.footer__text--container {
+    width: 100%;
+}
+
+.footer__copyright {
+    @extend .footer__text;
+    padding-top: 5%;
+    width: 70%;
+}
+
+// Tablet Styling
+@media (min-width: 600px) {
+
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    // Tablet Navigation Bar
+    nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+    }
+
+    .nav__logo {
+        align-self: center;
+        padding: 0px 3vw;
+    }
+
+    .nav__pages {
+        height: 80px;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+
+    .nav__text {
+        box-sizing: border-box;
+        width: auto;
+        height: 100%;
+        margin: 0px 4.5%;
+        padding: 32px 5px;
+    }
+
+    // Tablet Hero Image and Title
+    header {
+        height: 52vw;
+    }
+
+    header {
+        h1 {
+            font-size: 8vw;
+            line-height: 8vw;
+            width: 70%;
+            padding: 3%;
+        }
+    }
+    
+    // Tablet Body and Photos
+    .main__image--large {
+        width: 94%;
+        height: 47vw;
+        padding: 35px 0px;
+    }
+    
+    .main__image--small {
+    width: 30%;
+    padding-bottom: 3%;
+
+    }
+
+    .main__text {
+        width: 94%;
+    }
+
+    .main__quote {
+        padding-bottom: 32px;
+    }
+
+    .main__quote--attribution {
+        padding-bottom: 40px;
+    }
+
+    .main__paragraph--title {
+        padding-bottom: 24px;
+    }
+    
+    .main__paragraph--container {
+        width: 94%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main__paragraph--text:first-child {
+        padding-right: 24px;
+    }
+
+    .main__photoGallery {
+        margin-top: 48px;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+        padding-bottom: 2%;
+    }
+
+    // Tablet Footer
+    footer {
+        padding: 7% 24px;
+    }
+    
+    .footer__container {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    footer {
+        h1 {
+            font-size: 4.7vw;
+            line-height: 44px;
+            padding: 0px;
+        }
+    }
+
+    .footer__social {
+        width: 63%;
+        align-items: flex-start;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .footer__social--icon {
+        height: 3vw;
+        align-self: center;
+    }
+
+    .footer__logo {
+        display: flex;
+        align-self: center;
+        padding-bottom: 10px;
+        margin-left: 32%;
+    }
+
+ 
+    .footer__text {
+        font-size: 2vw;
+        line-height: 20px;
+        display: flex;
+        padding-left: 0px;
+    }
+
+    .footer__text--bold{
+        font-size: 2vw;
+    }
+
+    .footer__copyright{
+        font-size: 14px;
+        padding-bottom: 0px;
+    }
+
+    .footer__text--container {
+        width: 30%;
+        margin-top: 30px;
+    }
+}
+
+
+// Desktop Styling
+@media (min-width: 1024px) {
+
+    // Desktop Navigation Bar
+    .nav__logo {
+        padding-left: 12.5vw;
+        padding-right: 0px;
+    }
+
+    .nav__text  {
+        margin: 0px 0%;
+    }
+
+    .nav__text--selected {
+        margin: 0px 4%;
+    }
+
+    // Desktop Hero Image and Title
+    header {
+        height: 47vw;
+    }
+
+    header{
+        h1 {
+            padding: 12.5%;
+            width: 100%;
+            font-size: 60px;
+            line-height: 68px;
+        }
+    }
+
+    // Desktop Body and Photos
+    .main__image--large {
+        width: 62%;
+        height: 31vw;
+        padding: 48px 0px;
+    }
+
+    .main__text {
+        width: 75%
+    }
+
+    .main__quote {
+        padding-bottom: 40px;
+        width: 62%
+    }
+
+    .main__quote--attribution {
+        padding-bottom: 56px;
+        width: 62%
+    }
+
+    .main__paragraph--title {
+        padding-bottom: 32px;
+        width: 62%
+    }
+
+    .main__paragraph--container {
+        width: 62%;
+    }
+
+    .main__paragraph--text:first-child {
+        padding-right: 40px;
+    }
+    .main__photoGallery{
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+        justify-content: space-between;
+        padding-bottom: 1%;
+    }
+    .main__photoGallery--title {
+        padding-bottom: 64px;
+        width: 100%;
+    }
+
+    .main__image--small {
+       width: 32%;
+       padding-bottom: 2%
+    }
+
+    // Desktop Footer
+    footer {
+        padding: 3% 12.5%;
+    }
+
+    footer {
+        h1 {
+            font-size: 2.5vw;
+            padding-right: 5.5%
+        }
+    }
+
+    .footer__container {
+        justify-content: flex-start;
+    }
+
+    .footer__social--icon {
+        height: 1.5vw;
+    }
+
+    .footer__social {
+        width: 74%;
+    }
+
+    .footer__logo {
+        margin-left: 65%;
+        padding: 0px;
+    }
+
+    .footer__text--container {
+        width: 276px;
+    }
+
+    .footer__text--container:nth-child(5) {
+        width: auto;
+    }
+
+    .footer__text {
+        font-size: 16px;
+    }
+
+    .footer__text--bold {
+        font-size: 16px;
+    }
+
+    .footer__copyright {
+        padding-top: 2.7%
+    }
+}
