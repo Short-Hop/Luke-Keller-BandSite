@@ -81,9 +81,28 @@
             <img class="main__image--small" src="assets/Images/Photo-gallery-8.jpg">
             <img class="main__image--small" src="assets/Images/Photo-gallery-9.jpg">
         </div>
+            <h1 class="main__comments--title">
+                <br/>Join the Conversation
+            </h1>
+        <div id="commentTop" class="main__comments">
+            <div class="main__profilepic--container">
+                <img class="main__profilepic" src="./assets/Images/Mohan-muruge.jpg">
+            </div>
+
+            <form id="commentForm" class ="main__comments--container">
+                <label for="fullName"><h5>NAME</h5></label>
+                <input class="main__comments--input" type="text" name="fullName">
+
+                <label for="comment"><h5>COMMENT</h5></label>
+                <textarea class="main__comments--input" rows="4" type="text" name="comment">Add a new comment</textarea>
+                <button class="main__comments--button" type="submit" form="commentForm">COMMENT</button>
+            </form>
+
+            <div class="main__divider"></div>
+        </div> 
     </main>
 
-    <footer>
+    <footer class="footer__bio">
         <div class="footer__container">
             <h1>
                 Get in Touch
@@ -120,6 +139,7 @@
             <h4 class="footer__copyright">Copyright The Bees Knees © 2018 All Rights Reserved</h2>
         </div>
     </footer>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
