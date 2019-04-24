@@ -1,0 +1,321 @@
+// Tablet Styling
+@media (min-width: 600px) {
+
+    h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    h3 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    h4 {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    h5 {
+        font-size: 12px;
+        line-height: 20px;
+        padding: 0px;
+    }
+
+    table {
+        margin: 0px 3%;
+    }
+
+    td {
+        display: table-cell;
+        width: auto;
+    }
+
+    // Tablet Navigation Bar
+    nav {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+    }
+
+    .nav__logo {
+        align-self: center;
+        padding: 0px 3vw;
+    }
+
+    .nav__pages {
+        height: 80px;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+
+    .nav__text {
+        box-sizing: border-box;
+        width: 85px;
+        height: 100%;
+        margin: 0px 4%;
+        padding: 32px 5px;
+    }
+
+    // Tablet Hero Image and Title
+    header {
+        height: 52vw;
+    }
+
+    .header__shows {
+        height: 87vw;
+    }
+
+    .header__title {
+        font-size: 8vw;
+        line-height: 8.5vw;
+        width: 70%;
+        padding: 3%;
+    }
+
+    .header__text--small {
+        font-size: 3.2vw;
+        line-height: 4vw;
+        padding-top: 8%;
+        padding-bottom: 0px;
+        font-family: AvenirNextBold;
+    }
+
+
+    .header__title--shows {
+        line-height: 12vw;
+        align-self: flex-start;
+        width: 80%;
+    }
+
+    .header__SoundCloud--container {
+        width: 94%;
+    }
+
+    .header__SoundCloud {
+        width: 62%; 
+        height: 20vw;
+    }
+    
+    // Tablet Body and Photos
+    .main__image--large {
+        width: 94%;
+        height: 47vw;
+        padding: 35px 0px;
+    }
+    
+    .main__image--small {
+    width: 30%;
+    padding-bottom: 3%;
+    }
+
+    .main__text {
+        width: 94%;
+    }
+
+    .main__text--title {
+        padding-bottom: 32px;
+    }
+
+    .main__text--label {
+        display: none;
+    }
+
+    .main__label--top {
+        display: table-cell;
+        padding: 0px;
+    }
+
+    .main__text--info {
+        padding: 0px;
+        width: auto;
+    }
+
+    .main__text--date {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .main__table--date {
+        width: 30%;
+    }
+
+    .main__table--info {
+        width: 22%;
+    }
+
+    .main__table--button {
+        text-align: right;
+    }
+
+    .main__button--cta {
+        font-size: 14px;
+        margin: 16px, 0px;
+        width: 160px;
+        height: 48px;
+    }
+
+    .main__divider {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .main__quote {
+        padding-bottom: 32px;
+    }
+
+    .main__quote--attribution {
+        padding-bottom: 40px;
+    }
+
+    .main__paragraph--title {
+        padding-bottom: 24px;
+    }
+    
+    .main__paragraph--container {
+        width: 94%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main__paragraph--text:first-child {
+        padding-right: 24px;
+    }
+
+    .main__photoGallery {
+        margin-top: 48px;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: space-between;
+        padding-bottom: 2%;
+    }
+
+    .main__comments--input {
+        padding: 1.5vw;
+        font-size: 2vw;
+        line-height: 3vw;
+    }
+
+    .main__profilepic--container {
+        margin-top: 24px;
+        padding-top: 3vw;
+        margin-right: 4%;
+    }
+
+    .main__profilepic {
+        height: 6vw;
+        width: 6vw;
+    }
+
+    .main__comments {
+        align-self: center;
+        width: 68vw;
+        justify-content: flex-end;
+        .main__divider {
+            margin-bottom: 3vw;
+        }
+        h5 {
+            padding-bottom: 0px;
+            font-size: 1.7vw;
+            line-height: 3vw;
+        }
+    }
+
+    .main__comments--container {
+        width: 59vw;
+    }
+
+    .main__comments--button {
+        float: right;
+        margin: 3vw 0px 3vw 0px;
+        width: 20vw;
+        height: 6vw;
+    }
+
+    .main__comments--date {
+        float: none;
+        display: inline-block;
+        margin: 0px 8px;
+    }
+
+    .main__comments--body {
+        width: 61vw;
+        h3 {
+           padding: 0px;
+           font-size: 2vw;
+           line-height: 3vw;
+        }
+        h4 {
+            padding-bottom: 3vw;
+            font-size: 1.8vw;
+            line-height: 3vw;
+        }
+    }
+
+    .main__profilepic--gray {
+        margin-right: 2vw;
+        height: 5vw;
+        width: 5vw;
+    }
+
+    // Tablet Footer
+    footer {
+        padding: 7% 24px;
+        h1 {
+            font-size: 4.7vw;
+            line-height: 44px;
+            padding: 0px;
+        }
+    }
+    
+    .footer__container {
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__social {
+        width: 63%;
+        align-items: flex-start;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .footer__social--icon {
+        height: 3vw;
+        align-self: center;
+    }
+
+    .footer__logo {
+        display: flex;
+        align-self: center;
+        padding-bottom: 10px;
+        margin-left: 32%;
+    }
+
+    .footer__text {
+        font-size: 2vw;
+        line-height: 20px;
+        display: flex;
+        padding-left: 0px;
+    }
+
+    .footer__text--bold{
+        font-size: 2vw;
+    }
+
+    .footer__copyright{
+        font-size: 14px;
+        padding-bottom: 0px;
+    }
+
+    .footer__text--container {
+        width: 30%;
+        margin-top: 30px;
+    }
+}

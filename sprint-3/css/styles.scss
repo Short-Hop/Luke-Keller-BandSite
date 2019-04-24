@@ -1,0 +1,32 @@
+// Color Pallate
+$Black:  #323232;
+$Instock-blue: #004892;
+$Brainflix-blue:#0095FF;
+$White: #FFFFFF;
+$Silver: #AFAFAF;
+$Instock-blue-dark: #002F5F;
+$Brainflix-blue: #0065AD;
+$Mercury: #E1E1E1;
+$Alabaster: #FAFAFA;
+
+// Fonts
+@font-face {
+    font-family: "AvenirNextRegular";
+    src: url(../fonts/AvenirNextRegular.otf);
+}
+
+@font-face {
+    font-family: "AvenirNextDemiBold";
+    src: url(../fonts/AvenirNextDemi.otf);
+}
+
+@font-face {
+    font-family: "AvenirNextBold";
+    src: url(../fonts/AvenirNextBold.otf)
+}
+
+@import "mobile";
+@import "tablet";
+@import "desktop";
+
+
