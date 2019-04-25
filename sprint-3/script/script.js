@@ -4,7 +4,6 @@
 // Function that appends HTML for an array of Comment Objects
 function printComments() {
     allComments.forEach(displayComment);
-
 };
 
 // Function that removes all displayed comments
@@ -75,25 +74,13 @@ function dateConvert(commentTime) {
     //console.log('commented: ' + commentTime)
 
     let time = Date.now();
-
-    //console.log('now: ' + time);
-
-    let difference = time - commentTime;
-
-    console.log(difference);
-    console.log(new Date(difference));
-
-
-
     time = Math.round(time / 1000);
     commentTime = Math.round(commentTime / 1000);
 
     let timeUnit = '';
     let timeNumber = 0;
 
-
-
-    if ((time-commentTime) < 0) {
+    if ((time - commentTime) < 0) {
         return('Just now')
     }
     else if ((time - commentTime) < 60) {

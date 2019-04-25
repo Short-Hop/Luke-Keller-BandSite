@@ -618,6 +618,7 @@ footer h1 {
   }
   .main__text--info, .main__text--date {
     padding: 0px;
+    padding-right: 2vw;
     width: auto;
   }
   .main__text--date {
@@ -873,6 +874,9 @@ footer h1 {
   }
   .main__text, .main__text--title, .main__text--label, .main__text--info, .main__text--date, .main__quote, .main__quote--attribution, .main__paragraph--title, .main__paragraph--text, .main__photoGallery--title {
     width: 75%;
+  }
+  .main__text--info, .main__text--date {
+    padding: 0px;
   }
   .main__text--title {
     width: 35vw;
