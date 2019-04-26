@@ -4,7 +4,7 @@ function printComments() {
     allComments.forEach(displayComment);
 };
 
-// Function that removes all displayed comments
+// Function that removes all displayed comments and clears the allComments array
 function clearComments() {
     let commentTop = document.getElementById('commentTop');
     let main = document.querySelector('main');
@@ -121,7 +121,6 @@ function dateConvert(commentTime) {
     if (timeNumber == 1){
         timeUnit = timeUnit.substring(0, timeUnit.length - 1);
     }
-    
     return(timeNumber + ' ' + timeUnit + ' ago');
 }
 
@@ -135,9 +134,7 @@ function getAPIComments() {
         prepareDelete();
     });
 }
-const api_key = '?api_key=21df5013-1198-4f21-8162-6676ccbfaffc'
-const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=21df5013-1198-4f21-8162-6676ccbfaffc'
-let deleteButtons = []; 
+
 
 
 // sends a comment to the API, clears the current comments, and updates the allComments array
@@ -154,6 +151,19 @@ function postComment (comment) {
     
 }
 
+// Deletes comment when delete button is pressed
+function prepareDelete() {
+    deleteButtons = document.querySelectorAll(".main__comments--delete");
+    console.log(deleteButtons);
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            console.log(event);
+            deleteComment(event.target.id)
+        })
+    })
+
+}
 // Removes the comment from the API, clears the displayed comments, and gets the remaining comments
 function deleteComment (id) {
     let deleteURL = 'https://project-1-api.herokuapp.com/comments/' + id + api_key;
@@ -167,14 +177,16 @@ function deleteComment (id) {
     
 }
 
-
-
+const api_key = '?api_key=21df5013-1198-4f21-8162-6676ccbfaffc'
+const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=21df5013-1198-4f21-8162-6676ccbfaffc'
+let deleteButtons = []; 
 
 // Array of Comment Ojects
 let allComments = [];
 
 // print existing Object Array comments
 getAPIComments();
+
 
 //Waits for the form to be submitted, then posts the comment
 const commentForm = document.getElementById('commentForm');
@@ -189,7 +201,7 @@ document.getElementById('commentForm').addEventListener('submit', function (even
 
     }
 
-    // Submitted Comment is placed into a Comment Object and Sent to the API, Comment section is updated
+    // Submitted Comment is Sent to the API, Comment section is updated
     postComment(newComment);
 
     // Form text boxes are emptied
@@ -200,18 +212,7 @@ document.getElementById('commentForm').addEventListener('submit', function (even
     }
 });
 
-function prepareDelete() {
-    deleteButtons = document.querySelectorAll(".main__comments--delete");
-    console.log(deleteButtons);
 
-    deleteButtons.forEach(button => {
-        button.addEventListener('click', function (event) {
-            console.log(event);
-            deleteComment(event.target.id)
-        })
-    })
-
-}
 
 
 

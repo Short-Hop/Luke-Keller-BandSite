@@ -649,10 +649,11 @@ footer h1 {
   }
   .main__table--button {
     text-align: right;
+    padding: 16px 0px;
   }
   .main__button--cta, .main__comments--button {
     font-size: 14px;
-    margin: 16px, 0px;
+    margin: 0px;
     width: 160px;
     height: 48px;
   }
