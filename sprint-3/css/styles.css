@@ -411,10 +411,22 @@ header, .header__shows {
 }
 
 .main__comments--body h4 {
-  padding-bottom: 7.5%;
   font-size: 4.37vw;
   line-height: 6vw;
   width: 100%;
+}
+
+.main__comments--body .main__comments--delete {
+  padding-bottom: 5%;
+  padding-top: 2%;
+  float: right;
+  color: #E1E1E1;
+}
+
+.main__comments--body .main__comments--delete:hover {
+  text-decoration: underline;
+  color: #AFAFAF;
+  cursor: pointer;
 }
 
 .main__profilepic--gray {
@@ -733,9 +745,12 @@ footer h1 {
     line-height: 3vw;
   }
   .main__comments--body h4 {
-    padding-bottom: 3vw;
     font-size: 1.8vw;
     line-height: 3vw;
+  }
+  .main__comments--body .main__comments--delete {
+    padding-bottom: 1vw;
+    padding-top: 0px;
   }
   .main__profilepic--gray {
     margin-right: 2vw;
@@ -959,9 +974,11 @@ footer h1 {
     line-height: 24px;
   }
   .main__comments--body h4 {
-    padding-bottom: 24px;
     font-size: 14px;
     line-height: 20px;
+  }
+  .main__comments--body .main__comments--delete {
+    padding-bottom: 8px;
   }
   .main__profilepic--gray {
     margin-right: 16px;

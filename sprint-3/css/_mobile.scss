@@ -345,12 +345,27 @@ header {
         padding: 0px;
     }
     h4 {
-        padding-bottom: 7.5%;
+      //  padding-bottom: 7.5%;
         font-size: 4.37vw;
         line-height: 6vw;
         width: 100%;
     }
+    .main__comments--delete {
+        padding-bottom: 5%;
+        padding-top: 2%;
+        float: right;
+        color: $Mercury;
+
+        &:hover {
+            text-decoration: underline;
+            color: $Silver;
+            cursor: pointer;
+        }
+    }
+
 }
+
+
 
 .main__profilepic--gray {
     @extend .main__profilepic;

@@ -1,6 +1,4 @@
 
-
-
 // Function that appends HTML for an array of Comment Objects
 function printComments() {
     allComments.forEach(displayComment);
@@ -48,12 +46,20 @@ function displayComment(commentObject) {
 
     let postBody = document.createElement('h4');
     postBody.innerHTML = commentObject.comment;
+    
+    let deleteButton = document.createElement('h5')
+    deleteButton.innerHTML = 'delete'
+    deleteButton.classList.add('main__comments--delete')
+    deleteButton.setAttribute('id', commentObject.id)
 
     let container = document.createElement('div');
     container.classList.add('main__comments--body');
     container.appendChild(postName);
     container.appendChild(postDate);
-    container.appendChild(postBody)
+    container.appendChild(postBody);
+    container.appendChild(deleteButton);
+
+    
 
     let divider = document.createElement('div');
     divider.classList.add('main__divider');
@@ -62,6 +68,8 @@ function displayComment(commentObject) {
     fullComment.classList.add('main__comments')
     fullComment.appendChild(profilePic);
     fullComment.appendChild(container);
+
+
     fullComment.appendChild(divider)
 
     let main = document.querySelector('main');
@@ -71,14 +79,12 @@ function displayComment(commentObject) {
 // Converts a date from Milliseconds since Epoch to Easily-read Format
 function dateConvert(commentTime) {
 
-    //console.log('commented: ' + commentTime)
-
     let time = Date.now();
-    time = Math.round(time / 1000);
-    commentTime = Math.round(commentTime / 1000);
-
     let timeUnit = '';
     let timeNumber = 0;
+
+    time = Math.round(time / 1000);
+    commentTime = Math.round(commentTime / 1000);
 
     if ((time - commentTime) < 0) {
         return('Just now')
@@ -126,11 +132,13 @@ function getAPIComments() {
             allComments.unshift(makeComment(comment.name, comment.comment, comment.timestamp, comment.id, comment.likes));   
         })
         printComments();
+        prepareDelete();
     });
 }
-const api_key = '?api_key=5864a759-f7e2-4f1c-8137-57936b5c4952'
-const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=5864a759-f7e2-4f1c-8137-57936b5c4952'
-const showdatesURL = 'https://project-1-api.herokuapp.com/showdates?api_key=5864a759-f7e2-4f1c-8137-57936b5c4952'
+const api_key = '?api_key=21df5013-1198-4f21-8162-6676ccbfaffc'
+const commentURL = 'https://project-1-api.herokuapp.com/comments?api_key=21df5013-1198-4f21-8162-6676ccbfaffc'
+let deleteButtons = []; 
+
 
 // sends a comment to the API, clears the current comments, and updates the allComments array
 function postComment (comment) {
@@ -168,12 +176,6 @@ let allComments = [];
 // print existing Object Array comments
 getAPIComments();
 
-
-
-
-
-
-
 //Waits for the form to be submitted, then posts the comment
 const commentForm = document.getElementById('commentForm');
 document.getElementById('commentForm').addEventListener('submit', function (event) {
@@ -197,6 +199,22 @@ document.getElementById('commentForm').addEventListener('submit', function (even
         textBoxes[i].value = '';
     }
 });
+
+function prepareDelete() {
+    deleteButtons = document.querySelectorAll(".main__comments--delete");
+    console.log(deleteButtons);
+
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', function (event) {
+            console.log(event);
+            deleteComment(event.target.id)
+        })
+    })
+
+}
+
+
+
 
 
 

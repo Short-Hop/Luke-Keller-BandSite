@@ -1,4 +1,4 @@
-const showsURL = 'https://project-1-api.herokuapp.com/showdates?api_key=5864a759-f7e2-4f1c-8137-57936b5c4952';
+const showsURL = 'https://project-1-api.herokuapp.com/showdates?api_key=21df5013-1198-4f21-8162-6676ccbfaffc';
 
 allShows = []
 
