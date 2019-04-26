@@ -246,6 +246,10 @@ header, .header__shows {
   padding-bottom: 5%;
 }
 
+.main__text--label h5 {
+  padding: 0px;
+}
+
 .main__label--top {
   display: none;
 }

@@ -197,6 +197,9 @@ header {
 .main__text--label {
     @extend .main__text;
     padding-bottom: 5%;
+    h5 {
+        padding: 0px;
+    }
 }
 
 .main__label--top {
