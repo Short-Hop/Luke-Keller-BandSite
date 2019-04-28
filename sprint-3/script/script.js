@@ -132,6 +132,8 @@ function getAPIComments() {
         })
         printComments();
         prepareDelete();
+    }).catch(error => {
+        alert('An error occurred when loading comments')
     });
 }
 
@@ -142,7 +144,7 @@ function postComment (comment) {
 
     axios.post(commentURL, comment)
     .then(function (response) {
-        console.log(response);
+
         clearComments();
 
         getAPIComments();
@@ -154,11 +156,9 @@ function postComment (comment) {
 // Deletes comment when delete button is pressed
 function prepareDelete() {
     deleteButtons = document.querySelectorAll(".main__comments--delete");
-    console.log(deleteButtons);
 
     deleteButtons.forEach(button => {
         button.addEventListener('click', function (event) {
-            console.log(event);
             deleteComment(event.target.id)
         })
     })
@@ -168,7 +168,6 @@ function prepareDelete() {
 function deleteComment (id) {
     let deleteURL = 'https://project-1-api.herokuapp.com/comments/' + id + api_key;
     axios.delete(deleteURL).then(response => {
-        console.log(response);
 
         clearComments();
 
